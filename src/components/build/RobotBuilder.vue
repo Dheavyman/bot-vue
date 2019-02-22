@@ -19,10 +19,6 @@
       <button @click="addToCart()" class="add-to-cart">Add to Cart</button>
     </div>
     <div class="top-row">
-      <!-- <div class="robot-name">
-        {{selectedRobot.head.title}}
-        <span v-if="selectedRobot.head.onSale" class="sale">Sale!</span>
-      </div> -->
       <PartSelector
         :parts="availableParts.heads"
         position="top"
