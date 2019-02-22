@@ -9,8 +9,8 @@
 
 <script>
 function getPreviousValidIndex(index, length) {
-  const deprecatedIndex = index - 1;
-  return deprecatedIndex < 0 ? length - 1 : deprecatedIndex;
+  const decrementedIndex = index - 1;
+  return decrementedIndex < 0 ? length - 1 : decrementedIndex;
 }
 
 function getNextValidIndex(index, length) {
