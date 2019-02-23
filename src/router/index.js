@@ -12,6 +12,7 @@ import RobotBases from '../components/parts/RobotBases.vue';
 import StandardSidebar from '../components/sidebar/StandardSidebar.vue';
 import BuildSidebar from '../components/sidebar/BuildSidebar.vue';
 import ShoppingCart from '../components/cart/ShoppingCart.vue';
+import NotFound from '../components/shared/NotFound.vue';
 
 Vue.use(Router);
 
@@ -65,5 +66,16 @@ export default new Router({
     path: '/cart',
     name: 'Cart',
     component: ShoppingCart,
+  }, {
+    path: '/back',
+    redirect: (to) => {
+      console.log('==========', to);
+      const { query } = to;
+      return `/${query.to}`;
+    },
+  }, {
+    path: '*',
+    name: 'NotFound',
+    component: NotFound,
   }],
 });
