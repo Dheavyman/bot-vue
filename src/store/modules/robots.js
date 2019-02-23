@@ -26,7 +26,6 @@ export default {
   },
   getters: {
     cartSaleItems(state) {
-      console.log(state.cart);
       return state.cart.filter(robot => robot.head.onSale || robot.torso.onSale
         || robot.leftArm.onSale || robot.rightArm.onSale || robot.base.onSale);
     },

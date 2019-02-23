@@ -67,13 +67,6 @@ export default new Router({
     name: 'Cart',
     component: ShoppingCart,
   }, {
-    path: '/back',
-    redirect: (to) => {
-      console.log('==========', to);
-      const { query } = to;
-      return `/${query.to}`;
-    },
-  }, {
     path: '*',
     name: 'NotFound',
     component: NotFound,
